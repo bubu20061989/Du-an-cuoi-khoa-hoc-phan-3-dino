@@ -2,7 +2,7 @@
 
 
 import tkinter as tk
-import tkinter as messagebox
+from tkinter as messagebox
 class MyProject:
     def __init__(self, root):
          # Thiết lập cửa sổ màn hình
@@ -23,10 +23,10 @@ class MyProject:
         self.etyBankinh.place (x = self.x, y = self.y + 20)
 
 
-        self.btnTinhDienTichHC = tk.Button (self.root, text='Chu Vi', command= self.ChucNang1)
+        self.btnTinhDienTichHC = tk.Button (self.root, text='Diện tích bề mặt', command= self.ChucNang1)
         self.btnTinhDienTichHC.place (x=self.x + 200, y=self.y + 100)
-        self.btnTinhThetichHC = tk.Button (self.root, text='Dien Tich', command= self.ChucNang2)
-        self.btnTinhDienTichHC.place (x=self.x + 250, y=self.y + 100)
+        self.btnTinhThetichHC = tk.Button (self.root, text='Thể tích', command= self.ChucNang2)
+        self.btnTinhDienTichHC.place (x=self.x + 200, y=self.y + 120)
 
     def ChucNang1(self):
         Bankinh = float(self.etyBankinh.get())
