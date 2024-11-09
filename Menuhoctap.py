@@ -72,7 +72,7 @@ class MyProject:
         for widget in self.content_frame.winfo_children():
             widget.destroy()
         # Load the attendance management interface
-        app = ptBac1.PTB1(self.content_frame)
+        app = ptBac1.PTB1(self.content_frame)   
     def tinhToanCoban(self):
         pass
     def timXYZ(self):
