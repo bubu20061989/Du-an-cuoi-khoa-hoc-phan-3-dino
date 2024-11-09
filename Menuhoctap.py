@@ -2,6 +2,8 @@
 import tkinter as tk
 from tkinter import Menu
 import ptBac1
+import TinhKichThuocHCN
+import TinhKichThuocHinhTron
 class MyProject:
     def __init__(self, root):
         # Thiết lập cửa sổ màn hình
@@ -23,7 +25,9 @@ class MyProject:
         self.toan6 = Menu(self.monToan, tearoff=0)
         self.monToan.add_cascade(label='Toán 6', menu=self.toan6)
     # Tạo thành phần chu vi, diện tích
-        self.toan6.add_command(label='Chu vi và Diện tích', command=self.chuViDienTich)
+        self.chuViDienTich = Menu(self.monToan, tearoff=0)
+        self.toan6.add_cascade(label='Chu vi và diện tích', menu=self.chuViDienTich)
+        self.chuViDienTich.add_command(label="Kích thước HCN", command=self.chuViDienTich)
     # Tạo thành phần tính toán cơ bản
         self.toan6.add_command(label='Tính toán cơ bản', command=self.tinhToanCoban)
     # Tạo thành phần tìm x,y,z
@@ -72,7 +76,12 @@ class MyProject:
         for widget in self.content_frame.winfo_children():
             widget.destroy()
         # Load the attendance management interface
-        app = ptBac1.PTB1(self.content_frame)   
+        app = TinhKichThuocHCN.MyProject(self.content_frame) 
+        
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = TinhKichThuocHinhTron.MyProject(self.content_frame)    
     def tinhToanCoban(self):
         pass
     def timXYZ(self):

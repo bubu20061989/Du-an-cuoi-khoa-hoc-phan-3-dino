@@ -5,10 +5,10 @@ class MyProject:
     def __init__(self, root):
         # Thiết lập cửa sổ màn hình
         self.root = root
-        # Thiết lập tiêu đề cho cửa sổ
-        self.root.title('Chương trình Toán học')
-        # Thiết lập kích thước của cửa sổ
-        self.root.geometry('400x300')
+        # # Thiết lập tiêu đề cho cửa sổ
+        # self.root.title('Chương trình Toán học')
+        # # Thiết lập kích thước của cửa sổ
+        # self.root.geometry('400x300')
 
         self.x = 10
         self.y = 10
