@@ -1,6 +1,7 @@
 # Code để tạo cửa sổ
 import tkinter as tk
 from tkinter import Menu
+import ptBac1
 class MyProject:
     def __init__(self, root):
         # Thiết lập cửa sổ màn hình
@@ -61,10 +62,17 @@ class MyProject:
         self.hoa8.add_command(label='Tính tỉ khối', command=self.tinhTiKhoi)
         self.hoa8.add_command(label='Tính độ tan', command=self.tinhDoTan)    
 
+     # Frame to hold the content
+        self.content_frame = tk.Frame(self.root)
+        self.content_frame.pack(fill=tk.BOTH, expand=True)
+
 
 # Tạo hàm def cho thành phần thuộc monToan
     def chuViDienTich(self):
-        pass
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = ptBac1.PTB1(self.content_frame)
     def tinhToanCoban(self):
         pass
     def timXYZ(self):
